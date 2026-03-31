@@ -23,19 +23,85 @@
     <div class="flex items-center gap-4">
       <button
         class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-4 bg-[#ea2a33] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#c02128] transition-colors">
-        <span class="truncate">Join Now</span>
+        <a :href="whatsappUrl" target="_blank"
+          class="flex items-center justify-center rounded-full bg-primary px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
+          WhatsApp
+        </a>
       </button>
-      <button class="md:hidden text-white">
-        <span class="material-symbols-outlined"> menu </span>
+      <!-- Botón hamburguesa / cerrar -->
+      <button class="md:hidden text-white focus:outline-none" @click="toggleMenu" aria-label="Toggle navigation menu"
+        :aria-expanded="isMenuOpen">
+        <span class="material-symbols-outlined transition-transform duration-300">
+          {{ isMenuOpen ? 'close' : 'menu' }}
+        </span>
       </button>
     </div>
   </header>
+
+  <!-- Menú mobile (overlay) -->
+  <Transition name="mobile-menu">
+    <div v-if="isMenuOpen"
+      class="md:hidden fixed top-[57px] left-0 right-0 bottom-0 bg-[#111111] z-40 flex flex-col items-center justify-center gap-8"
+      @click.self="closeMenu">
+      <a v-for="link in navLinks" :key="link.label" :href="link.href"
+        class="text-white text-2xl font-semibold hover:text-[#ea2a33] transition-colors duration-200"
+        @click="closeMenu">
+        {{ link.label }}
+      </a>
+      <button
+        class="mt-4 flex cursor-pointer items-center justify-center rounded-md h-12 px-8 bg-[#ea2a33] text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-[#c02128] transition-colors">
+        Join Now
+      </button>
+    </div>
+  </Transition>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
   name: 'NavbarComponent',
+  setup() {
+    const isMenuOpen = ref(false)
+
+    const navLinks = [
+      { label: 'Home', href: '#' },
+      { label: 'Classes', href: '#' },
+      { label: 'Trainers', href: '#' },
+      { label: 'Pricing', href: '#' },
+      { label: 'Contact', href: '#' },
+    ]
+
+    function toggleMenu() {
+      isMenuOpen.value = !isMenuOpen.value
+    }
+
+    function closeMenu() {
+      isMenuOpen.value = false
+    }
+
+    const phoneNumber = ref('525613568367');
+    const message = ref('Hola, quiero cotizar');
+    const whatsappUrl = `https://wa.me/${phoneNumber.value}?text=${encodeURIComponent(message.value)}`;
+
+
+    return { isMenuOpen, navLinks, toggleMenu, closeMenu, whatsappUrl }
+  },
 })
+
+
 </script>
+
+<style scoped>
+/* Animación de entrada/salida del menú mobile */
+.mobile-menu-enter-active,
+.mobile-menu-leave-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.mobile-menu-enter-from,
+.mobile-menu-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+</style>
