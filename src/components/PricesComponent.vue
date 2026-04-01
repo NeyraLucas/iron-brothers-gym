@@ -103,7 +103,7 @@ const plans: Plan[] = [
     name: 'Asesoría Personalizada',
     price: '$500',
     period: '/mes',
-    badge: 'Most Popular',
+    badge: 'Más Popular',
     featured: true,
     cta: 'Elegir Plan',
     contact: whatsappUrl,

@@ -24,7 +24,7 @@
     </nav>
     <div class="flex items-center gap-4">
       <button
-        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-4 bg-[#ea2a33] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#c02128] transition-colors">
+        class="hidden md:flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-4 bg-[#ea2a33] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#c02128] transition-colors">
         <a :href="whatsappUrl" target="_blank"
           class="flex items-center justify-center rounded-full bg-primary px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
           WhatsApp
