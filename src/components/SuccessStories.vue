@@ -1,5 +1,5 @@
 <template>
-    <section class="py-20 px-4 md:px-10 bg-[#1a1a1a]">
+    <section id="stories" class="py-20 px-4 md:px-10 bg-[#1a1a1a]">
         <div class="max-w-6xl mx-auto">
             <!-- Título -->
             <h2 class="text-white text-4xl font-bold leading-tight tracking-tight text-center mb-4 md:text-5xl">
@@ -12,37 +12,22 @@
             <!-- Carousel -->
             <div class="carousel-wrapper">
                 <!-- Arrow izquierda -->
-                <button
-                    class="carousel-arrow carousel-arrow--left"
-                    @click="prev"
-                    :disabled="currentIndex === 0"
-                    aria-label="Anterior"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="15 18 9 12 15 6"/>
+                <button class="carousel-arrow carousel-arrow--left" @click="prev" :disabled="currentIndex === 0"
+                    aria-label="Anterior">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6" />
                     </svg>
                 </button>
 
                 <!-- Grid de 4 imágenes -->
-                <div
-                    class="carousel-track"
-                    ref="trackRef"
-                    @touchstart.passive="onTouchStart"
-                    @touchmove="onTouchMove"
-                    @touchend="onTouchEnd"
-                >
-                    <div
-                        class="carousel-grid"
-                        :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
-                    >
+                <div class="carousel-track" ref="trackRef" @touchstart.passive="onTouchStart" @touchmove="onTouchMove"
+                    @touchend="onTouchEnd">
+                    <div class="carousel-grid" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
                         <template v-for="(page, pageIdx) in pages" :key="pageIdx">
                             <div class="carousel-page">
-                                <div
-                                    v-for="(img, imgIdx) in page"
-                                    :key="imgIdx"
-                                    class="carousel-item"
-                                    @click="openLightbox(img)"
-                                >
+                                <div v-for="(img, imgIdx) in page" :key="imgIdx" class="carousel-item"
+                                    @click="openLightbox(img)">
                                     <img :src="img" :alt="`Success story ${pageIdx * 4 + imgIdx + 1}`" />
                                 </div>
                             </div>
@@ -51,28 +36,20 @@
                 </div>
 
                 <!-- Arrow derecha -->
-                <button
-                    class="carousel-arrow carousel-arrow--right"
-                    @click="next"
-                    :disabled="currentIndex === pages.length - 1"
-                    aria-label="Siguiente"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="9 18 15 12 9 6"/>
+                <button class="carousel-arrow carousel-arrow--right" @click="next"
+                    :disabled="currentIndex === pages.length - 1" aria-label="Siguiente">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6" />
                     </svg>
                 </button>
             </div>
 
             <!-- Dots -->
             <div class="carousel-dots">
-                <button
-                    v-for="(_, idx) in pages"
-                    :key="idx"
-                    class="carousel-dot"
-                    :class="{ active: idx === currentIndex }"
-                    @click="currentIndex = idx"
-                    :aria-label="`Página ${idx + 1}`"
-                />
+                <button v-for="(_, idx) in pages" :key="idx" class="carousel-dot"
+                    :class="{ active: idx === currentIndex }" @click="currentIndex = idx"
+                    :aria-label="`Página ${idx + 1}`" />
             </div>
         </div>
     </section>
@@ -80,16 +57,13 @@
     <!-- Lightbox -->
     <Teleport to="body">
         <Transition name="lightbox">
-            <div
-                v-if="selectedImage"
-                class="lightbox-overlay"
-                @click.self="closeLightbox"
-            >
+            <div v-if="selectedImage" class="lightbox-overlay" @click.self="closeLightbox">
                 <!-- Botón cerrar -->
                 <button class="lightbox-close" @click="closeLightbox" aria-label="Cerrar">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="18" y1="6" x2="6" y2="18"/>
-                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
                     </svg>
                 </button>
 
@@ -319,6 +293,7 @@ export default defineComponent({
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
 /* ===== Lightbox ===== */
 .lightbox-overlay {
     position: fixed;

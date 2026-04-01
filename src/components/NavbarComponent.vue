@@ -12,13 +12,15 @@
     <nav class="hidden md:flex flex-1 justify-center gap-8">
       <a class="text-white text-sm font-medium leading-normal hover:text-[#ea2a33] transition-colors" href="#">Home</a>
       <a class="text-white text-sm font-medium leading-normal hover:text-[#ea2a33] transition-colors"
-        href="#">Classes</a>
+        href="#stories">Historias</a>
       <a class="text-white text-sm font-medium leading-normal hover:text-[#ea2a33] transition-colors"
-        href="#">Trainers</a>
+        href="#services">Servicios</a>
       <a class="text-white text-sm font-medium leading-normal hover:text-[#ea2a33] transition-colors"
-        href="#">Pricing</a>
+        href="#trainers">Trainers</a>
       <a class="text-white text-sm font-medium leading-normal hover:text-[#ea2a33] transition-colors"
-        href="#">Contact</a>
+        href="#prices">Precios</a>
+      <a class="text-white text-sm font-medium leading-normal hover:text-[#ea2a33] transition-colors"
+        href="#contact">Contacto</a>
     </nav>
     <div class="flex items-center gap-4">
       <button
@@ -66,10 +68,11 @@ export default defineComponent({
 
     const navLinks = [
       { label: 'Home', href: '#' },
-      { label: 'Classes', href: '#' },
-      { label: 'Trainers', href: '#' },
-      { label: 'Pricing', href: '#' },
-      { label: 'Contact', href: '#' },
+      { label: 'Historias', href: '#stories' },
+      { label: 'Servicios', href: '#services' },
+      { label: 'Entrenadores', href: '#trainers' },
+      { label: 'Precios', href: '#prices' },
+      { label: 'Contacto', href: '#contact' },
     ]
 
     function toggleMenu() {

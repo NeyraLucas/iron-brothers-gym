@@ -13,10 +13,10 @@
           Empieza tu cambio hoy
         </a>
       </button>
-      <button
+      <a href="#prices"
         class="flex self-center min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-12 px-6 border border-white text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-all">
         Ver Planes
-      </button>
+      </a>
     </div>
   </section>
 </template>

@@ -1,67 +1,47 @@
 <template>
-  <section class="py-20 px-4 md:px-10">
+  <section id="services" class="py-20 px-4 md:px-10">
     <div class="max-w-5xl mx-auto">
-      <h2 class="text-white text-4xl font-bold leading-tight tracking-tight text-center mb-12 md:text-5xl">Classes &amp;
-        Services</h2>
-      <div class="border-b border-[#222222] mb-8">
-        <div class="flex justify-center gap-8">
-          <a class="flex flex-col items-center justify-center border-b-2 border-[#ea2a33] text-white pb-3 pt-2 px-2"
-            href="#">
-            <p class="text-sm font-bold tracking-wide">Schedule</p>
-          </a>
-          <a class="flex flex-col items-center justify-center border-b-2 border-transparent text-gray-400 hover:text-white hover:border-white pb-3 pt-2 px-2 transition-colors"
-            href="#">
-            <p class="text-sm font-bold tracking-wide">Trainers</p>
-          </a>
-          <a class="flex flex-col items-center justify-center border-b-2 border-transparent text-gray-400 hover:text-white hover:border-white pb-3 pt-2 px-2 transition-colors"
-            href="#">
-            <p class="text-sm font-bold tracking-wide">Services</p>
-          </a>
+      <h2 class="text-white text-4xl font-bold leading-tight tracking-tight text-center mb-12 md:text-5xl">Servicios
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-4 h-auto md:h-[800px]">
+        <div class="md:col-span-8 relative overflow-hidden group">
+          <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            data-alt="Group of intense people performing synchonized heavy medicine ball slams in a dimly lit studio"
+            src="../assets/imgs/iron-brothers-gym.jpeg" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+          <div class="absolute bottom-12 left-2 md:left-6 lg:left-12">
+            <h3 class="font-headline font-black text-white text-5xl uppercase italic tracking-tighter">Entrenamiento con
+              Pesas</h3>
+            <p class="max-w-md text-white/80 mt-4 font-body uppercase tracking-widest text-sm">Hipertrofia y fuerza.
+              Acceso total a nuestra zona de Powerlifting y culturismo con asesoría en sala.</p>
+          </div>
         </div>
-      </div>
-      <div class="overflow-x-auto">
-        <table class="w-full text-left">
-          <thead class="bg-[#1a1a1a]">
-            <tr>
-              <th class="p-4 text-white text-sm font-medium">Time</th>
-              <th class="p-4 text-white text-sm font-medium">Class</th>
-              <th class="p-4 text-white text-sm font-medium">Trainer</th>
-              <th class="p-4 text-white text-sm font-medium">Location</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-[#222222]">
-            <tr class="hover:bg-[#1a1a1a] transition-colors">
-              <td class="p-4 text-gray-400 text-sm">6:00 AM</td>
-              <td class="p-4 text-white text-sm font-medium">Morning Yoga</td>
-              <td class="p-4 text-gray-400 text-sm">Emily Carter</td>
-              <td class="p-4 text-gray-400 text-sm">Studio 1</td>
-            </tr>
-            <tr class="hover:bg-[#1a1a1a] transition-colors">
-              <td class="p-4 text-gray-400 text-sm">7:30 AM</td>
-              <td class="p-4 text-white text-sm font-medium">Strength Training</td>
-              <td class="p-4 text-gray-400 text-sm">David Lee</td>
-              <td class="p-4 text-gray-400 text-sm">Main Gym</td>
-            </tr>
-            <tr class="hover:bg-[#1a1a1a] transition-colors">
-              <td class="p-4 text-gray-400 text-sm">9:00 AM</td>
-              <td class="p-4 text-white text-sm font-medium">Cardio Blast</td>
-              <td class="p-4 text-gray-400 text-sm">Jessica Brown</td>
-              <td class="p-4 text-gray-400 text-sm">Studio 2</td>
-            </tr>
-            <tr class="hover:bg-[#1a1a1a] transition-colors">
-              <td class="p-4 text-gray-400 text-sm">5:00 PM</td>
-              <td class="p-4 text-white text-sm font-medium">Evening Yoga</td>
-              <td class="p-4 text-gray-400 text-sm">Emily Carter</td>
-              <td class="p-4 text-gray-400 text-sm">Studio 1</td>
-            </tr>
-            <tr class="hover:bg-[#1a1a1a] transition-colors">
-              <td class="p-4 text-gray-400 text-sm">6:30 PM</td>
-              <td class="p-4 text-white text-sm font-medium">CrossFit</td>
-              <td class="p-4 text-gray-400 text-sm">David Lee</td>
-              <td class="p-4 text-gray-400 text-sm">Main Gym</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="md:col-span-4 grid grid-rows-2 gap-4">
+          <div class="relative overflow-hidden group">
+            <img class="w-full h-100 object-cover transition-transform duration-700 group-hover:scale-105 opacity-60"
+              data-alt="Woman in yoga pose on a black mat with dramatic silhouette lighting against a dark background"
+              src="../assets/imgs/personal-training-gym.jpg" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+            <div class="absolute bottom-12 left-2">
+              <h3 class="font-headline font-bold text-4xl uppercase tracking-tighter text-white">Entrenamiento Personal
+              </h3>
+              <p class="max-w-md text-white/80 mt-4 font-body uppercase tracking-widest text-sm">Coaching 1 a 1 adaptado
+                a tus objetivos, nivel actual y patologías. Optimiza cada repetición.</p>
+            </div>
+          </div>
+          <div class="relative overflow-hidden group">
+            <img class="w-full h-100 object-cover transition-transform duration-700 group-hover:scale-105 opacity-40"
+              data-alt="Close up of high performance indoor cycling bike wheel in motion with neon red lighting reflections"
+              src="../assets/imgs/personal-training.jpeg" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+            <div class="absolute bottom-12 left-2">
+              <h3 class="font-headline font-bold text-4xl uppercase tracking-tighter text-white">Preparación para
+                Competencias</h3>
+              <p class="max-w-md text-white/80 mt-4 font-body uppercase tracking-widest text-sm">Asesoría integral para
+                atletas de alto rendimiento. Puesta a punto, nutrición y poses para tarima.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>

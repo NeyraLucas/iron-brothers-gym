@@ -4,14 +4,16 @@
       <NavbarComponent />
       <HeroComponent />
       <WhyChoose />
-      <SuccessStories />
       <ServicesComponent />
+      <SuccessStories />
+      <ReviewsComponent />
       <OurTrainers />
       <PricesComponent />
       <LocationComponent />
       <FooterComponent />
     </div>
   </main>
+  <BtnWhatsApp />
 </template>
 
 <script lang="ts">
@@ -25,6 +27,8 @@ import FooterComponent from '@/components/FooterComponent.vue'
 import WhyChoose from '@/components/WhyChoose.vue'
 import SuccessStories from '@/components/SuccessStories.vue'
 import OurTrainers from '@/components/OurTrainers.vue'
+import BtnWhatsApp from '@/components/BtnWhatsApp.vue'
+import ReviewsComponent from '@/components/ReviewsComponent.vue'
 
 export default defineComponent({
   name: 'HomeView',
@@ -38,6 +42,8 @@ export default defineComponent({
     PricesComponent,
     LocationComponent,
     FooterComponent,
+    BtnWhatsApp,
+    ReviewsComponent
   },
 })
 </script>

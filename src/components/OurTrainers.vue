@@ -1,5 +1,5 @@
 <template>
-    <section class="py-20 px-4 md:px-10 bg-[#1a1a1a]">
+    <section id="trainers" class="py-20 px-4 md:px-10 bg-[#1a1a1a]">
         <div class="max-w-5xl mx-auto">
             <h2 class="text-white text-4xl font-bold text-center mb-12 md:text-5xl">Our Trainers</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
