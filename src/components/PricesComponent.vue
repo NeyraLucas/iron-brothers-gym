@@ -1,7 +1,8 @@
 <template>
   <section id="prices" class="py-20 px-4 md:px-10">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-white text-4xl font-bold text-center mb-12 md:text-5xl">Pricing Plans</h2>
+      <h2 class="text-white text-4xl font-bold text-center mb-12 md:text-5xl">Nuestros <span
+          class="accent">Planes</span></h2>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
         <div v-for="plan in plans" :key="plan.id" :class="[
@@ -145,3 +146,9 @@ export default defineComponent({
   },
 })
 </script>
+
+<style scoped>
+.accent {
+  color: #ea2a33;
+}
+</style>
