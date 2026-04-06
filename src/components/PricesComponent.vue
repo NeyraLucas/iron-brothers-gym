@@ -58,7 +58,7 @@
 import { defineComponent, ref } from 'vue'
 
 const phoneNumber = ref('525613568367');
-const message = ref('Hola, quiero cotizar');
+const message = ref('Hola, quiero unirme al gym');
 const whatsappUrl = `https://wa.me/${phoneNumber.value}?text=${encodeURIComponent(message.value)}`;
 
 

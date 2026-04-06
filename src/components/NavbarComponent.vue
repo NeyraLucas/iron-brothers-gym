@@ -45,10 +45,10 @@
         @click="closeMenu">
         {{ link.label }}
       </a>
-      <button
+      <!-- <button
         class="mt-4 flex cursor-pointer items-center justify-center rounded-md h-12 px-8 bg-[#ea2a33] text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-[#c02128] transition-colors">
         Join Now
-      </button>
+      </button> -->
     </div>
   </Transition>
 </template>
@@ -79,7 +79,7 @@ export default defineComponent({
     }
 
     const phoneNumber = ref('525613568367');
-    const message = ref('Hola, quiero cotizar');
+    const message = ref('Hola, quiero unirme al gym');
     const whatsappUrl = `https://wa.me/${phoneNumber.value}?text=${encodeURIComponent(message.value)}`;
 
 
